@@ -265,13 +265,10 @@ img{
 
 .main-wrapper .col-right .message{
   height: 70px;
-  background-color: var(--message);
-}
-
-.main-wrapper .col-right .message{
+  padding: 10px 0;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
+  background-color: var(--message);
 }
 
 .main-wrapper .col-right .message .emoji,
@@ -307,10 +304,57 @@ img{
     height: 100vh;
     margin: 0;
   }
+
+  .main-wrapper .col-left{
+    min-width: 0;
+    width: fit-content;
+  }
+
+  .main-wrapper .col-left .topbar .col:first-child{
+    width: 100%;
+  }
+
+  .main-wrapper .col-left .topbar .col .avatar{
+    margin: auto;
+  }
+
+  .main-wrapper .col-left .contacts{
+    height: calc(100% - 70px);
+  }
+
+  .main-wrapper .col-right{
+    width: 100%;
+  }
+
+  .main-wrapper .col-left .contacts .contact .col .name,
+  .main-wrapper .col-left .contacts .contact .col .mex,
+  .main-wrapper .col-left .contacts .contact .col .hour,
+  .main-wrapper .col-left .topbar .col.d-flex,
+  .main-wrapper .col-left .searchbar,
+  .main-wrapper .notifications{
+    display: none;
+  }
+
+  .main-wrapper .col-right .chat .row{
+    padding: 0 40px;
+  }
 }
 
 /* mobile */
 
 @media screen and (max-width:542px){
-  
+  .main-wrapper .col-left,
+  .main-wrapper .col-right .topbar .col:last-child,
+  .main-wrapper .col-right .message .emoji,
+  .main-wrapper .col-right .message .rec{
+    display: none;
+  }
+
+  .main-wrapper .col-right .chat .row{
+    padding: 0 25px;
+  }
+
+  .main-wrapper .col-right .message input[type="text"]{
+    margin: 0 20px;
+  }
 }
