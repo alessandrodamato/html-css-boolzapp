@@ -222,8 +222,45 @@ img{
 
 .main-wrapper .col-right .chat{
   height: calc(100% - 70px - 70px);
+  padding: 50px 0;
   overflow-y: scroll;
   background-image: url(../img/mine.jpg);
+}
+
+.main-wrapper .col-right .chat .row{
+  width: 100%;
+  padding: 0 90px;
+}
+
+.main-wrapper .col-right .chat .row.sent{
+  justify-content: flex-end;
+}
+
+.main-wrapper .col-right .chat .row.sent .text-message{
+  background-color: var(--mexsent);
+}
+
+.main-wrapper .col-right .chat .row .text-message{
+  max-width: 60%;
+  margin: 5px 0;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.main-wrapper .col-right .chat .row .text-message p{
+  padding-right: 10px;
+}
+
+.main-wrapper .col-right .chat .row .text-message .message-options{
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--grey);
+}
+
+.main-wrapper .col-right .chat .row .text-message .message-options div:last-child{
+  font-size: .7rem;
 }
 
 .main-wrapper .col-right .message{
