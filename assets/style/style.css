@@ -3,6 +3,10 @@
   --background2:#dadbd4;
   --mexsent:#d5f9ba;
   --lightblue:#8edafc;
+  --grey:#b1b1b1;
+  --topbar:#eaeaea;
+  --message:#f3eeea;
+  --searchbar:#fafafa;
 }
 
 /* reset */
@@ -36,10 +40,61 @@ body{
   display: flex;
 }
 
+.debug{
+  border: 1px solid black;
+}
+
+.b-r-grey{
+  border-right: 1px solid var(--grey);
+}
+
 /* main-wrapper */
 
 .main-wrapper{
   background-color: white;
+}
+
+.main-wrapper .col-left{
+  width: 30%;
+  height: 100%;
+  /* background-color: red;  */
+}
+
+.main-wrapper .topbar{
+  height: 70px;
+  background-color: var(--topbar);
+}
+
+.main-wrapper .col-left .notifications{
+  height: 80px;
+  background-color: var(--lightblue);
+}
+
+.main-wrapper .col-left .searchbar{
+  height: 50px;
+  background-color: var(--searchbar);
+}
+
+.main-wrapper .col-left .contacts{
+  height: calc(100% - 70px - 80px - 50px);
+  overflow-y: scroll;
+}
+
+.main-wrapper .col-right{
+  width: 70%;
+  height: 100%;
+  background-color: blue;
+}
+
+.main-wrapper .col-right .chat{
+  height: calc(100% - 70px - 70px);
+  overflow-y: scroll;
+  background-image: url(../img/mine.jpg);
+}
+
+.main-wrapper .col-right .message{
+  height: 70px;
+  background-color: var(--message);
 }
 
 /* ############ media queries ############ */
