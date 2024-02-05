@@ -61,7 +61,8 @@ img{
 }
 
 .main-wrapper .col-left{
-  width: 460px;
+  min-width: 360px;
+  width: 30%;
   height: 100%;
 }
 
@@ -75,6 +76,7 @@ img{
 .main-wrapper .topbar i{
   padding: 0 10px;
   font-size: 1.5rem;
+  cursor: pointer;
   color: var(--grey);
 }
 
@@ -83,7 +85,8 @@ img{
 }
 
 .main-wrapper .topbar .col .avatar,
-.main-wrapper .notifications .col .not-symbol{
+.main-wrapper .notifications .col .not-symbol,
+.main-wrapper .contacts .contact .col .avatar{
   width: 50px;
   height: 50px;
   margin-left: 15px;
@@ -136,6 +139,7 @@ img{
 .main-wrapper .col-left .searchbar > div > div{
   width: 70px;
   text-align: center;
+  cursor: pointer;
   color: var(--grey);
 }
 
@@ -144,11 +148,16 @@ img{
   height: 100%;
   font-size: .9rem;
   border: none;
-  color: var(--grey);
 }
 
-.main-wrapper .col-left .searchbar input[type="search"]:focus{
+.main-wrapper .col-left .searchbar input[type="search"]:focus,
+.main-wrapper .col-right .message input[type="text"]:focus{
   outline: none;
+}
+
+.main-wrapper .col-left .searchbar input[type="search"]::placeholder,
+.main-wrapper .col-right .message input[type="text"]::placeholder{
+  color: var(--grey);
 }
 
 .main-wrapper .col-left .contacts{
@@ -156,10 +165,39 @@ img{
   overflow-y: scroll;
 }
 
+.main-wrapper .col-left .contacts .contact{
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid var(--border);
+}
+
+.main-wrapper .col-left .contacts .contact .col{
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  position: relative;
+}
+
+.main-wrapper .col-left .contacts .contact .col .name{
+  font-size: 1.1rem;
+}
+
+.main-wrapper .col-left .contacts .contact .col .mex{
+  font-size: .9rem;
+  color: var(--grey);
+}
+
+.main-wrapper .col-left .contacts .contact .col .hour{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: .8rem;
+  color: var(--grey);
+}
+
 .main-wrapper .col-right{
   width: 70%;
   height: 100%;
-  background-color: blue;
 }
 
 .main-wrapper .col-right .topbar .col:first-child{
@@ -167,7 +205,8 @@ img{
 }
 
 .main-wrapper .col-right .topbar .col .name-info,
-.main-wrapper .notifications .col .not-info{
+.main-wrapper .notifications .col .not-info,
+.main-wrapper .contacts .contact .col .name-mex{
   flex-direction: column;
   justify-content: center;
   line-height: 22px;
@@ -190,6 +229,35 @@ img{
 .main-wrapper .col-right .message{
   height: 70px;
   background-color: var(--message);
+}
+
+.main-wrapper .col-right .message{
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.main-wrapper .col-right .message .emoji,
+.main-wrapper .col-right .message .rec{
+  width: 100px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: var(--info);
+}
+
+.main-wrapper .col-right .message i:hover{
+  cursor: pointer;
+}
+
+.main-wrapper .col-right .message input[type="text"]{
+  width: 100%;
+  height: 100%;
+  padding: 0 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: .9rem;
 }
 
 /* ############ media queries ############ */
