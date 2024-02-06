@@ -14,8 +14,9 @@
   --divider:#d6d6d6;
   
   /* dark theme palette */
-
-
+  --darkbackground1:#005c4bff;
+  --darkbackground2:#4e4d54ff;
+  
 }
 
 /* reset */
@@ -352,10 +353,10 @@ ul{
 body.darkmode{
   background: linear-gradient(
     to bottom,
-    var(--background1)0%,
-    var(--background1)15%,
-    var(--background2)15%,
-    var(--background2)100%
+    var(--darkbackground1)0%,
+    var(--darkbackground1)15%,
+    var(--darkbackground2)15%,
+    var(--darkbackground2)100%
   );
 }
 
