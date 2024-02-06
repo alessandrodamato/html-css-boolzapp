@@ -14,9 +14,12 @@
   --divider:#d6d6d6;
   
   /* dark theme palette */
-  --darkbackground1:#005c4bff;
-  --darkbackground2:#4e4d54ff;
-  
+  --dbackground1:#005c4bff;
+  --dbackground2:#4e4d54ff;
+  --dtopbar:#2b2b2bff;
+  --dinfo:#b5b5b5ff;
+  --dnotificaions:#1dab62ff;
+  --dsearchbar:#383838ff;
 }
 
 /* reset */
@@ -353,12 +356,63 @@ ul{
 body.darkmode{
   background: linear-gradient(
     to bottom,
-    var(--darkbackground1)0%,
-    var(--darkbackground1)15%,
-    var(--darkbackground2)15%,
-    var(--darkbackground2)100%
+    var(--dbackground1)0%,
+    var(--dbackground1)15%,
+    var(--dbackground2)15%,
+    var(--dbackground2)100%
   );
 }
+
+body.darkmode .b-r-grey{
+  border-right: 1px solid black;
+}
+
+body.darkmode .main-wrapper .topbar{
+  background-color: var(--dtopbar);
+}
+
+body.darkmode .main-wrapper .topbar,
+body.darkmode .main-wrapper .topbar i{
+  color: white;
+}
+
+body.darkmode .main-wrapper .col-right .topbar .col .name-info .info{
+  color: var(--dinfo);
+}
+
+body.darkmode .main-wrapper .col-left .notifications{
+  background-color: var(--dnotificaions);
+  color: white;
+}
+
+body.darkmode .main-wrapper .notifications .col .not-symbol{
+  color: var(--dnotificaions);
+}
+
+body.darkmode .main-wrapper .notifications .col .not-info span:last-child{
+  color: white;
+}
+
+body.darkmode .main-wrapper .col-left .searchbar{
+  background-color: var(--dtopbar);
+}
+
+body.darkmode .main-wrapper .col-left .searchbar > div,
+body.darkmode .main-wrapper .col-left .searchbar input[type="search"]{
+  border: none;
+  background-color: var(--dsearchbar);
+  color: white;
+}
+
+body.darkmode .main-wrapper .col-left .searchbar > div{
+  border-bottom: 1px solid var(--dinfo);
+}
+
+body.darkmode .main-wrapper .col-left .searchbar > div > div{
+  color: white;
+}
+
+
 
 /* ############ media queries ############ */
 
