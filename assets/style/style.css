@@ -1,4 +1,6 @@
 :root{
+  /* default palette */
+
   --background1:#009688;
   --background2:#dadbd4;
   --mexsent:#d5f9ba;
@@ -10,6 +12,10 @@
   --searchbar:#fafafa;
   --border:#f5f5f5;
   --divider:#d6d6d6;
+  
+  /* dark theme palette */
+
+
 }
 
 /* reset */
@@ -288,6 +294,7 @@ ul{
   right: 10px;
   z-index: 1;
   text-align: center;
+  box-shadow: 0 0 15px var(--info);
   border: 1px solid black;
   border-radius: 5px;
   background-color: white;
@@ -338,6 +345,18 @@ ul{
   border: none;
   border-radius: 5px;
   font-size: .9rem;
+}
+
+/* ############ dark theme ############ */
+
+body.darkmode{
+  background: linear-gradient(
+    to bottom,
+    var(--background1)0%,
+    var(--background1)15%,
+    var(--background2)15%,
+    var(--background2)100%
+  );
 }
 
 /* ############ media queries ############ */
