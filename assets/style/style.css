@@ -20,6 +20,7 @@
   --dinfo:#b5b5b5ff;
   --dnotificaions:#1dab62ff;
   --dsearchbar:#383838ff;
+  --dsentoptions:#6fa399ff;
 }
 
 /* reset */
@@ -430,17 +431,39 @@ body.darkmode .main-wrapper .col-left .contacts .contact:hover{
   background-color: hsla(0, 0%, 30%, .8);
 }
 
-body.darkmode .main-wrapper .col-right .message,
-body.darkmode .main-wrapper .col-right .message input[type="text"]{
-  background-color: var(--dmain);
+body.darkmode .main-wrapper .col-right .chat{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.7)), url(../img/mine.jpg);
+}
+
+body.darkmode .main-wrapper .col-right .chat .row.sent .text-message{
+  background-color: var(--dbackground1);
+}
+
+body.darkmode .main-wrapper .col-right .chat .row .text-message{
+  background-color: var(--dsearchbar);
   color: white;
 }
 
+body.darkmode .main-wrapper .col-right .chat .row.sent .text-message .message-options{
+  color: var(--dsentoptions);
+}
+
+body.darkmode .main-wrapper .col-right .chat .row .text-message .message-options .drop-down-menu{
+  box-shadow: 0 0 7px white;
+  background-color: var(--dmain);
+}
+
+body.darkmode .main-wrapper .col-right .chat .row .text-message .message-options .drop-down-menu li,
 body.darkmode .main-wrapper .col-right .message .emoji,
 body.darkmode .main-wrapper .col-right .message .rec{
   color: white;
 }
 
+body.darkmode .main-wrapper .col-right .message,
+body.darkmode .main-wrapper .col-right .message input[type="text"]{
+  background-color: var(--dmain);
+  color: white;
+}
 
 /* ############ media queries ############ */
 
