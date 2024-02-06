@@ -16,7 +16,7 @@
   /* dark theme palette */
   --dbackground1:#005c4bff;
   --dbackground2:#4e4d54ff;
-  --dtopbar:#2b2b2bff;
+  --dmain:#2b2b2bff;
   --dinfo:#b5b5b5ff;
   --dnotificaions:#1dab62ff;
   --dsearchbar:#383838ff;
@@ -184,6 +184,11 @@ ul{
   width: 100%;
   height: 80px;
   border-bottom: 1px solid var(--border);
+}
+
+.main-wrapper .col-left .contacts .contact:hover{
+  cursor: pointer;
+  background-color: hsla(0, 0%, 95%, .8);
 }
 
 .main-wrapper .col-left .contacts .contact .col{
@@ -367,8 +372,12 @@ body.darkmode .b-r-grey{
   border-right: 1px solid black;
 }
 
+body.darkmode .main-wrapper{
+  background-color: var(--dmain);
+}
+
 body.darkmode .main-wrapper .topbar{
-  background-color: var(--dtopbar);
+  background-color: var(--dmain);
 }
 
 body.darkmode .main-wrapper .topbar,
@@ -394,7 +403,7 @@ body.darkmode .main-wrapper .notifications .col .not-info span:last-child{
 }
 
 body.darkmode .main-wrapper .col-left .searchbar{
-  background-color: var(--dtopbar);
+  background-color: var(--dmain);
 }
 
 body.darkmode .main-wrapper .col-left .searchbar > div,
@@ -408,10 +417,29 @@ body.darkmode .main-wrapper .col-left .searchbar > div{
   border-bottom: 1px solid var(--dinfo);
 }
 
-body.darkmode .main-wrapper .col-left .searchbar > div > div{
+body.darkmode .main-wrapper .col-left .searchbar > div > div,
+body.darkmode .main-wrapper .col-left .contacts .contact{
   color: white;
 }
 
+body.darkmode .main-wrapper .col-left .contacts .contact{
+  border-bottom: none;
+}
+
+body.darkmode .main-wrapper .col-left .contacts .contact:hover{
+  background-color: hsla(0, 0%, 30%, .8);
+}
+
+body.darkmode .main-wrapper .col-right .message,
+body.darkmode .main-wrapper .col-right .message input[type="text"]{
+  background-color: var(--dmain);
+  color: white;
+}
+
+body.darkmode .main-wrapper .col-right .message .emoji,
+body.darkmode .main-wrapper .col-right .message .rec{
+  color: white;
+}
 
 
 /* ############ media queries ############ */
