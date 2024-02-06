@@ -261,20 +261,31 @@ ul{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   color: var(--grey);
 }
 
-.main-wrapper .col-right .chat .row .text-message .message-options div:first-child{
-  position: relative;
+.main-wrapper .col-right .chat .row .text-message .message-options div{
+  width: 100%;
+  height: 50%;
+  text-align: center;
+}
+
+.main-wrapper .col-right .chat .row .text-message .message-options .arrow:hover{
+  cursor: pointer;
+}
+
+.main-wrapper .col-right .chat .row .text-message .message-options .arrow:hover .drop-down-menu{
+  display: inline-block;
 }
 
 .main-wrapper .col-right .chat .row .text-message .message-options .drop-down-menu{
   display: none;
-  width: 150px;
+  width: 170px;
   padding: 10px;
   position: absolute;
-  top: 100%;
-  right: 50%;
+  top: 20px;
+  right: 10px;
   z-index: 1;
   text-align: center;
   border: 1px solid black;
@@ -282,19 +293,20 @@ ul{
   background-color: white;
 }
 
-.main-wrapper .col-right .chat .row .text-message .message-options .drop-down-menu ul li{
+.main-wrapper .col-right .chat .row .text-message .message-options .drop-down-menu li{
   padding: 5px;
   font-size: .9rem;
   cursor: pointer;
   color: black;
 }
 
-.main-wrapper .col-right .chat .row .text-message .message-options .drop-down-menu ul li:hover{
+.main-wrapper .col-right .chat .row .text-message .message-options .drop-down-menu li:hover{
   text-decoration: underline;
 }
 
 .main-wrapper .col-right .chat .row .text-message .message-options div:last-child{
   font-size: .7rem;
+  align-items: flex-end;
 }
 
 .main-wrapper .col-right .message{
