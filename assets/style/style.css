@@ -491,16 +491,12 @@ body.darkmode .main-wrapper .col-right .message input[type="text"]{
   }
 
   .main-wrapper .col-left{
-    min-width: 0;
+    min-width: 100px;
     width: fit-content;
   }
 
   .main-wrapper .col-left .topbar .col:first-child{
     width: 100%;
-  }
-
-  .main-wrapper .col-left .topbar .col .avatar{
-    margin: auto;
   }
 
   .main-wrapper .col-left .contacts{
